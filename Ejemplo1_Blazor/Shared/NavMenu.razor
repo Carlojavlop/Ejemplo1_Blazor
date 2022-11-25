@@ -1,6 +1,6 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">SEP</a>
+        <a class="navbar-brand" href="">Magister</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -9,35 +9,36 @@
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
+
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+            <NavLink class="nav-link" href="Index" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </div>
+
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="Perfil">
                 <span class="oi oi-person" aria-hidden="true"></span> Perfil
             </NavLink>
         </div>
 
-
-
-        <li class="nav-item px-3"> 
+        <div class="nav-item px-3"> 
             <NavLink class="nav-link" href="counter" @onclick="()=>expandSubMenus= !expandSubMenus">
                 <span class="oi oi-bookmark" aria-hidden="true"></span> Capacitacion
             </NavLink>
             @if (expandSubMenus)
             {
-                <NavLink class="expand-menu" href="" >
+                <NavLink class="expand-menu" href="Cursos" >
                     <span class="oi oi-briefcase" aria-hidden="true"></span> Cursos
                 </NavLink>
 
                 <NavLink class="expand-menu" href="">
                     <span class="oi oi-book" aria-hidden="true"></span> Talleres
                 </NavLink>
-            }
-
-       </li>
+            } 
+            
+        </div>
 
 
 

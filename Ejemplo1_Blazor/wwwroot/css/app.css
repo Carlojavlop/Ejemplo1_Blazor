@@ -11,8 +11,9 @@ h1:focus {
     outline: none;
 }
 
+/*Modificar color de boton logi*/
 a, .btn-link {
-    color: aquamarine;
+    color:aliceblue;
 }
 
 .btn-primary {
