@@ -1,0 +1,33 @@
+﻿@page "/Foros"
+<PageTitle>Foros</PageTitle>
+
+<div>
+    <input type="button" class="btn btn-primary" value="Todos los Recurso" @onclick="(() => DataChanged())" />
+</div>
+
+<h3>Foros</h3>
+
+
+
+
+@code {
+    private bool earningResources = true;
+    private bool learningResourceService;
+    private bool ResourceLists = true;
+    private bool resourceListService;
+
+
+    private void DataChanged()
+    {
+
+
+        earningResources = learningResourceService;
+        ResourceLists =  resourceListService;
+        StateHasChanged();
+
+
+    }
+
+
+}
+
