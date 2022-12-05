@@ -2,7 +2,11 @@
 @page "/Talleres"
 @inject DialogService DialogService
 
-<RadzenButton Text="@text" Click=@(args => DialogService.Confirm("Estas seguro?", "Titulo", new ConfirmOptions() { OkButtonText = "SI", CancelButtonText = "NO" }))></RadzenButton>
+
+
+
+<RadzenButton Text="@text" Click=@(args => DialogService.Confirm("Estas seguro?", "Titulo", new ConfirmOptions()
+ { OkButtonText = "SI", CancelButtonText = "NO" }))></RadzenButton>
 
 
 @*   <label>rangos args </label> *@
