@@ -21,7 +21,6 @@ main {
     display: flex;
     align-items: center;
     background-color:cornflowerblue;
-    
 }
 
     .top-row ::deep a, .top-row ::deep .btn-link {
