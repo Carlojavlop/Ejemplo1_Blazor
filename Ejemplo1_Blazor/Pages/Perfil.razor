@@ -34,7 +34,7 @@
 *@
 
 
-<div class="col-md-5 p-2">
+<div class="col-md-6 p-2">
 
 
 
@@ -53,14 +53,24 @@
         <RadzenButton Icon="change_history" Click=@(args => OnClick("Secondary button")) Text="Historial" ButtonStyle="ButtonStyle.Success" />
 
 
-        <RadzenButton Text="@tex" ButtonStyle="ButtonStyle.Secondary"Icon="delete" IsBusy=@busy Click=@(args => DialogService.Confirm("Estas seguro", "Titulo", new ConfirmOptions()
+        <RadzenButton Text="@tex" ButtonStyle="ButtonStyle.Secondary"Icon="delete" IsBusy=@busy Click=@(args => DialogService.Confirm("Estas seguro", "Eliminar?", new ConfirmOptions()
                       { OkButtonText = "SI" , CancelButtonText = "NO" }))></RadzenButton>
 
 
- <RadzenButton Text="@text" style="width: 160px" Icon="save" IsBusy=@busy Click=@(args => DialogService.Confirm("Estas seguro Guardar tu datos?", "Titulo", new ConfirmOptions()
+ <RadzenButton Text="@text" style="width: 160px" Icon="save" IsBusy=@busy Click=@(args => DialogService.Confirm("Estas seguro Actualizar tu datos?", "Guarda?", new ConfirmOptions()
          { OkButtonText = "SI" , CancelButtonText = "NO" }))></RadzenButton>
 
-                         
+
+
+@*
+        <div class="col-md-4 p-3">
+            <RadzenCard>
+                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Link to path in application with icon</RadzenText>
+                <RadzenLink Icon="accessibility" Path="button" Text="Go to the Button component page" />
+            </RadzenCard>
+        </div>
+
+                 *@        
 
     </RadzenCard>
 </div>
