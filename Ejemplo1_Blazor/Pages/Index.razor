@@ -1,6 +1,36 @@
 ﻿@page "/Index"
-
+ 
 <PageTitle>Index</PageTitle>
+<head>
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/material-base.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+
+
+</head>
+    
+   
+
+
+@*<BlazorStrap.BSCarousel NumberofIntems="@items.Count">
+    <div class="carousel-inner">
+
+        @for(int i=0;i < items.Count; i++)
+        {
+            
+        <BlazorStrap.BSCarouselItem Src="@items[i].Source" Alt="@items[i].Alt" style="width:100%;height:500px"/>
+
+        }
+    </div>
+
+        <BlazorStrap.BSCarouselCaption CaroucelDirection="BlazorStrap.CarouselDirection.Previous" NumberofItems"@items.count"/>
+         <BlazorStrap.BSCarouselCaption CarouselDirection="BlazorStrap.CarouselDirection.Next" NumberofItems"@items.count"/>
+
+
+</BlazorStrap.BSCarousel>
+*@
 
 
 
@@ -13,8 +43,27 @@
 
 
 <div class="col-md-12 p-3">
-    <div class="rz-background-color-danger-light"><span class="rz-color-white">Dirección General de Formación Continua a Docentes y Directivos</span></div>
+ 
+    <div style="font-size:larger;text-align: center;" class="rz-background-color-danger-light"><span class="rz-color-white"> Dirección General de Formación Continua a Docentes y Directivos </span></div>
 </div>
+
+
+<div class="col-md-5 p-4">
+    <div class="nav-item px-2">
+
+        <a class="nav-link disabled">BUSCAR</a>
+
+
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+    </div>
+
+</div>
+
+
+
 
 <div class="col-md-12 p-3">
 
@@ -31,30 +80,78 @@ Somos la instancia de la Secretaría de Educación Pública encargada de normar 
 
  <div class="col-md-4 p-3">
 <RadzenCard>
-    <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Cursos</RadzenText>
-        <RadzenLink Icon="account_box" Path="button" Text="Ver Más" />
+    <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Galeria</RadzenText>
+            <RadzenLink class="bi bi-folder2" Path="button" Text="Ver Más" />
 </RadzenCard>
 </div>
-
+   
 <div class="col-md-4 p-3">
     <RadzenCard>
-        <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Talleres</RadzenText>
-        <RadzenLink Icon="account_circle" Path="button" Text="Ver Más" />
+        <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Videos</RadzenText>
+            <RadzenLink class="bi bi-youtube" Path="button" Text="Ver Más" />
     </RadzenCard>
 </div>
+    
+<div class="col-md-4 p-3">
+    <RadzenCard>
+        <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Documentos</RadzenText>
+            <RadzenLink class="bi bi-file-earmark-check" Path="button" Text="Ver Más" />
+    </RadzenCard>
+</div>
+
+</div>
+
+<h2>
+    Datos de formación continua por entidad
+</h2>
+
+<h5>
+    En esta sección encontrarás la ubicación de la unidad de formación continua en tu entidad, así como información
+    relevante y pertinente acerca de cómo se lleva la formación y actualización docente en tu estado.
+</h5>
 
 <div class="col-md-4 p-3">
     <RadzenCard>
         <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Entidad</RadzenText>
-        <RadzenLink Icon="pageview" Path="button" Text="Ver Entidades" />
+        <RadzenLink class="bi bi-geo-alt" Path="button" Text="Ver Entidades" />
     </RadzenCard>
 </div>
-</div>
+
+
+
 @code {
-  
+ //    IList<Item> items= new List<Item>
+ //   {
+
+ //   new Item{
+ //       Source="/Imagenes/1.png",
+ //       Alt="First Slide",
+ //       Caption="Slide 1",
+ //       Header= "Slide 1 Header"
+ //   },
+ //    new Item{
+ //       Source="//Imagenes/2.png",
+ //       Alt="Second Slide",
+ //       Caption="Slide 2",
+ //       Header= "Slide 2 Header"
+ //   },
+
+ //    new Item{
+ //       Source="/Imagenes/3.png",
+ //       Alt="Trird Slide",
+ //       Caption="Slide 3",
+ //       Header= "Slide 3 Header"
+ //   },
+         
+ //   };
+
+ //   class Item
+ //   {
+ //    public string Source{ get; set;}="";
+ //    public string   Alt{ get; set;}="";
+ //    public string  Caption{ get; set;}="";
+ //    public string Header{ get; set;}="";
     
-
-
-
+ //}
 
 }

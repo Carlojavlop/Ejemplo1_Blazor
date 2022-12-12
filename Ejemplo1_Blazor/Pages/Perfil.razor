@@ -6,22 +6,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 
-<div class="col-md-5 p-2">
-    <div class="nav-item px-2">
-
-        <a class="nav-link disabled">BUSCAR</a>
-
-
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-    </div>
-
-</div>
-
-
-
 @*<div class="col-md-4 col-sm-4 text-center">
 
     <div class="col">
@@ -34,31 +18,91 @@
 *@
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="col-md-6 p-2">
 
 
-
+   
 
     <RadzenCard>
-
-        <i class="bi bi-person-circle " style="font-size: 4em;color:black"></i>
-
-        <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Agregar</RadzenText>
-
-        <RadzenUpload Url="upload/single" Icon="upload" ChooseText="" Progress=@(args => OnProgress(args, "Upload with icon"))>
+        <i class="bi bi-bell"></i>
+        <i class="bi bi-person-circle " style="font-size: 4em;color:brown"> </i>
+        <h5>Carlos javier </h5>
+   
 
 
+       
+
+        <RadzenUpload Url="upload/single" Icon="upload" ChooseText=">Agregar<" Progress=@(args => OnProgress(args, "Upload with icon"))>
+
+
+          
         </RadzenUpload>
+        <i class="bi bi-gear">Ajuste</i>
+
+       
+
+        <RadzenText Text="Cambiar Escala de grices" TextStyle="TextStyle.Subtitle2"></RadzenText>
+        <RadzenSwitch @bind-Value=@value Change=@(args => OnChange(args, "Switch")) />
+
+
+       
+
+
+
+    </RadzenCard>
+
+
+    <RadzenCard Style="background-color:deepskyblue;">
+
+        <RadzenButton Icon="help" Click=@(args => OnClick("Secondary button")) Text="Ayuda" ButtonStyle="ButtonStyle.Success" />
+
 
         <RadzenButton Icon="change_history" Click=@(args => OnClick("Secondary button")) Text="Historial" ButtonStyle="ButtonStyle.Success" />
 
 
-        <RadzenButton Text="@tex" ButtonStyle="ButtonStyle.Secondary"Icon="delete" IsBusy=@busy Click=@(args => DialogService.Confirm("Estas seguro", "Eliminar?", new ConfirmOptions()
+
+        <RadzenButton Text="@tex" ButtonStyle="ButtonStyle.Secondary" Icon="delete" IsBusy=@busy Click=@(args => DialogService.Confirm("Estas seguro", "Eliminar?", new ConfirmOptions()
                       { OkButtonText = "SI" , CancelButtonText = "NO" }))></RadzenButton>
 
 
- <RadzenButton Text="@text" style="width: 160px" Icon="save" IsBusy=@busy Click=@(args => DialogService.Confirm("Estas seguro Actualizar tu datos?", "Guarda?", new ConfirmOptions()
-         { OkButtonText = "SI" , CancelButtonText = "NO" }))></RadzenButton>
+        <RadzenButton Text="@text" style="width: 160px" Icon="save" IsBusy=@busy Click=@(args => DialogService.Confirm("Estas seguro Actualizar tu datos?", "Guarda?", new ConfirmOptions()
+                      { OkButtonText = "SI" , CancelButtonText = "NO" }))></RadzenButton>
+
+    </RadzenCard>
+
+   
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -72,8 +116,6 @@
 
                  *@        
 
-    </RadzenCard>
-</div>
 
  
 
@@ -90,6 +132,22 @@
 
     </div>
 </div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @code{
@@ -129,6 +187,18 @@
     {
         Console.Write($"{buttonName} clicked");
     }
+
+
+
+            bool value;
+            bool disabledValue = true;
+
+            //EventConsole console;
+
+            void OnChange(bool? value, string name)
+            {
+                Console.Write($"{name} value changed to {value}");
+            }
 }
 
 
