@@ -1,34 +1,125 @@
 ﻿@page "/fetchdata"
 @inject HttpClient Http
+@inject DialogService DialogService
 
 <PageTitle>Taller</PageTitle>
 
+<head>
 
- <div class="col-sm-6">
-            <h3 class="mt-3"></h3>
-    <RadzenImage Path="https://elestudiantedigital.com/wp-content/uploads/2018/09/cursos-para-docentes-online.jpg" Style="width: 50%;">
-            </RadzenImage>
- </div>
-<RadzenButton Icon="bookmark_border" Click=@(args => OnClick("Secondary button")) Text="Ver Más Cursos" ButtonStyle="ButtonStyle.Success" />
+</head>
 
 
 
 
 
+<div class="row">
 
-<div class="col-sm-6">
-            <h3 class="mt-3"></h3>
-    <RadzenImage Path="https://materialeseducativos.mx/wp-content/uploads/2014/09/Problsexto.png" Style="width: 50%;">
-          
-            </RadzenImage>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="/imagenes/Cursos.jpg" class="form-control form-control-lg" style="width:60%;height:200px;">
+            <div class="caption">
+                <h3>Cursos</h3>
+                <p>los cursos online exponen el contenido auditivamente
+                  </p>
+                <p>
+                    <RadzenButton ButtonStyle="ButtonStyle.Info" Text="Registrar" style="width: 150px" Icon="assignment_turned_in" Click=@(args => DialogService.Confirm("Estas seguro dar de Alta este Cursos?", "Registro?", new ConfirmOptions()
+                                  { OkButtonText = "SI" , CancelButtonText = "NO" }))></RadzenButton>
 
-
+                    <RadzenButton Icon="assignment_turned_in" Text="Ver Más" Style="width: 150px;" ButtonStyle="ButtonStyle.Secondary" Click=@ShowCloseableFromOverlayDialog />
+                     
+                </p>
+            </div>
         </div>
+    </div>
+
+
+
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="/imagenes/Cursos.jpg" class="form-control form-control-lg" style="width:60%;height:200px;">
+            <div class="caption">
+                <h3>Cursos</h3>
+                <p>
+                    los cursos online exponen el contenido auditivamente 
+                </p>
+                <p>
+                    <RadzenButton ButtonStyle="ButtonStyle.Info" Text="Registrar" style="width: 150px" Icon="assignment_turned_in" Click=@(args => DialogService.Confirm("Estas seguro dar de Alta este Cursos?", "Registro?", new ConfirmOptions()
+                                  { OkButtonText = "SI" , CancelButtonText = "NO" }))></RadzenButton>
+                    <a href="#" class="btn btn-warning" role="button">Ver Más</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="/imagenes/Cursos.jpg" class="form-control form-control-lg"  style="width:60%;height:200px;">
+            <div class="caption">
+                <h3>Cursos</h3>
+                <p>
+                    los cursos online exponen el contenido auditivamente
+                </p>
+                <p>
+                    <RadzenButton ButtonStyle="ButtonStyle.Info" Text="Registrar" style="width: 150px" Icon="assignment_turned_in" Click=@(args => DialogService.Confirm("Estas seguro dar de Alta este Cursos?", "Registro?", new ConfirmOptions()
+                                  { OkButtonText = "SI" , CancelButtonText = "NO" }))></RadzenButton>
+                    <a href="#" class="btn btn-warning" role="button">Ver Más</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
 
-<RadzenButton Icon="assignment_turned_in" Click=@(args => OnClick("Secondary button")) Text="Ver Má Talleres" ButtonStyle="ButtonStyle.Success" />
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="/imagenes/Taller.png" style="width:60%;height:200px;">
+            <div class="caption">
+                <h3>Talleres</h3>
+                <p>
+                    Talleres online exponen el contenido auditivamente
+                </p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">Registrar</a>
+                    <a href="#" class="btn btn-success" role="button">Ver Más</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+
+        <div class="thumbnail">
+            <img src="/imagenes/Taller.png" style="width:60%;height:200px;">
+            <div class="caption">
+                <h3>Talleres</h3>
+                <p>
+                    Talleres online exponen el contenido auditivamente
+                </p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">Registrar</a>
+                    <a href="#" class="btn btn-success" role="button">Ver Más</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="/imagenes/Taller.png" style="width:60%;height:200px;">
+            <div class="caption">
+                <h3>Talleres</h3>
+                <p>
+                    Talleres online exponen el contenido auditivamente
+                </p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">Registrar</a>
+                    <a href="#" class="btn btn-success" role="button">Ver Más</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 @code{
 
@@ -37,7 +128,14 @@
     {
         Console.Write($"{buttonName} clicked");
     }
-
+    async Task ShowCloseableFromOverlayDialog()
+    {
+        await DialogService.OpenAsync("Ver mas", ds =>
+    @<div>
+      
+        Los cursos online suelen ser más baratos que los presenciales, ya que el centro de formación pueden optimizar mucho más sus recursos
+    </div>, new DialogOptions() { CloseDialogOnOverlayClick = true });
+    }
 
 }
 

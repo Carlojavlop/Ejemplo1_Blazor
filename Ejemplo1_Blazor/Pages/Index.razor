@@ -1,50 +1,67 @@
 ﻿@page "/Index"
  
+
+
 <PageTitle>Index</PageTitle>
 <head>
     <link rel="stylesheet" href="_content/Radzen.Blazor/css/material-base.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
-
-
-
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/carousel.css">
 </head>
-    
-   
 
 
-@*<BlazorStrap.BSCarousel NumberofIntems="@items.Count">
-    <div class="carousel-inner">
-
-        @for(int i=0;i < items.Count; i++)
-        {
-            
-        <BlazorStrap.BSCarouselItem Src="@items[i].Source" Alt="@items[i].Alt" style="width:100%;height:500px"/>
-
-        }
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="false" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="/imagenes/1.jpg" class="d-block w-100 " alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        
+       
+      </div>
     </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="/imagenes/2.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+       
+     
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/imagenes/3.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+       
+        
+      </div>
+    </div>
+  </div>
 
-        <BlazorStrap.BSCarouselCaption CaroucelDirection="BlazorStrap.CarouselDirection.Previous" NumberofItems"@items.count"/>
-         <BlazorStrap.BSCarouselCaption CarouselDirection="BlazorStrap.CarouselDirection.Next" NumberofItems"@items.count"/>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
 
 
-</BlazorStrap.BSCarousel>
-*@
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
 
 
-
-
-
-
-
-
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 
 
 <div class="col-md-12 p-3">
  
-    <div style="font-size:larger;text-align: center;" class="rz-background-color-danger-light"><span class="rz-color-white"> Dirección General de Formación Continua a Docentes y Directivos </span></div>
+    <div style="font-size:larger;text-align: center;" class="rz-background-color-secondary-darker">
+        <span class="rz-color-white"> Dirección General de Formación Continua a Docentes y Directivos </span>
+    </div>
 </div>
 
 
@@ -120,38 +137,6 @@ Somos la instancia de la Secretaría de Educación Pública encargada de normar 
 
 
 @code {
- //    IList<Item> items= new List<Item>
- //   {
-
- //   new Item{
- //       Source="/Imagenes/1.png",
- //       Alt="First Slide",
- //       Caption="Slide 1",
- //       Header= "Slide 1 Header"
- //   },
- //    new Item{
- //       Source="//Imagenes/2.png",
- //       Alt="Second Slide",
- //       Caption="Slide 2",
- //       Header= "Slide 2 Header"
- //   },
-
- //    new Item{
- //       Source="/Imagenes/3.png",
- //       Alt="Trird Slide",
- //       Caption="Slide 3",
- //       Header= "Slide 3 Header"
- //   },
-         
- //   };
-
- //   class Item
- //   {
- //    public string Source{ get; set;}="";
- //    public string   Alt{ get; set;}="";
- //    public string  Caption{ get; set;}="";
- //    public string Header{ get; set;}="";
-    
- //}
+ 
 
 }

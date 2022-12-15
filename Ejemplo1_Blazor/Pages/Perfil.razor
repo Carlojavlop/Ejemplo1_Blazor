@@ -2,35 +2,13 @@
 @inject DialogService DialogService
 
 <PageTitle>Perfil</PageTitle>
+<head>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
+</head>
 
-@*<div class="col-md-4 col-sm-4 text-center">
-
-    <div class="col">
-
-        <RadzenButton Text="@tex" ButtonStyle="ButtonStyle.Secondary" style="width: 160px" Icon="autorenew" IsBusy=@busy Click=@(args => DialogService.Confirm("Estas seguro Edictar tu datos?", "Titulo", new ConfirmOptions()
-                      { OkButtonText = "SI" , CancelButtonText = "NO" }))></RadzenButton>
-
-    </div>
-</div>
-*@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="col-md-6 p-2">
+<div class="col-md-5 p-2">
 
 
    
@@ -86,84 +64,13 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@*
-        <div class="col-md-4 p-3">
-            <RadzenCard>
-                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Link to path in application with icon</RadzenText>
-                <RadzenLink Icon="accessibility" Path="button" Text="Go to the Button component page" />
-            </RadzenCard>
-        </div>
-
-                 *@        
-
-
- 
-
-              
-            
-            
-          
-
- @*<div class="row mb-4">
-        <div class="col">
-
-<RadzenButton Text="@text" style="width: 160px" Icon="save" IsBusy=@busy Click=@(args => DialogService.Confirm("Estas seguro Guardar tu datos?", "Titulo", new ConfirmOptions()
-              { OkButtonText = "SI" , CancelButtonText = "NO" }))></RadzenButton>
-
-    </div>
-</div>*@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @code{
 
     bool busy;
     string text = "Guardar";
     string tex = "Eliminar";
 
-//async Task OnBusyClick()
-//        {
-//            busy = true;
-//            await Task.Delay(2000);
-//            busy = false;
-//        }
 
-  
 
     void OnProgress(UploadProgressArgs args, string name)
     {

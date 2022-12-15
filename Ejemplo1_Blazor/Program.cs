@@ -3,7 +3,7 @@ using Ejemplo1_Blazor;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Radzen;
-
+using System.Net.NetworkInformation;
 
 
 //public static async Task Main(string[] args)
@@ -20,7 +20,7 @@ using Radzen;
 //}
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.Services.AddBlazorStrap();
+
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
